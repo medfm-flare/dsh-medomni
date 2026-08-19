@@ -31,9 +31,7 @@
 
 ## Demo
 
-<video src="https://raw.githubusercontent.com/medfm-flare/dsh-medomni/main/assets/dsh-medomni_demo_xray.mp4" controls width="100%">
-  <a href="assets/dsh-medomni_demo_xray.mp4">Watch the MedOmni X-ray demo</a>
-</video>
+https://github.com/user-attachments/assets/7a017a24-20ab-4a46-a5b4-d44cd6127703
 
 ## What this plugin does
 
