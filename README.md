@@ -31,7 +31,8 @@
 
 ## Demo
 
-https://github.com/user-attachments/assets/7a017a24-20ab-4a46-a5b4-d44cd6127703
+https://github.com/user-attachments/assets/43c44455-cc57-4ab3-b664-8446d8c65624
+
 
 ## What this plugin does
 
