@@ -43,9 +43,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/weimengmeng1999/dsh-medomni.git"
+    "url": "git+https://github.com/medfm-flare/dsh-medomni.git"
   },
-  "homepage": "https://github.com/weimengmeng1999/dsh-medomni",
+  "homepage": "https://github.com/medfm-flare/dsh-medomni/tree/main",
   "engines": {
     "node": ">=22"
   },

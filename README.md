@@ -49,7 +49,7 @@ Each tool shells out to a Python script that self-manages its own shared virtual
 ### 1. Install the plugin
 
 ```sh
-dsh plugin --profile web add github:weimengmeng1999/dsh-medomni
+dsh plugin --profile web add github:medfm-flare/dsh-medomni
 ```
 
 
