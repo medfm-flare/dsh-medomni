@@ -31,7 +31,7 @@
 
 ## Demo
 
-https://github.com/user-attachments/assets/43c44455-cc57-4ab3-b664-8446d8c65624
+https://github.com/user-attachments/assets/8a098d95-8d24-44bd-8435-67e52450c524
 
 
 ## What this plugin does
@@ -43,7 +43,10 @@ Each tool shells out to a Python script that self-manages its own shared virtual
 - A DeepSeek Harness `dsh` installation.
 - **An NVIDIA GPU with CUDA.** These are multi-GB vision-language and segmentation models — CPU (`gpu: -1`, where a tool exposes it) works but is slow enough to be impractical for anything beyond a quick smoke test.
 - [`uv`](https://docs.astral.sh/uv/), `git`, and Python 3 on `PATH` — every script bootstraps its own shared venv and, for BiomedParse, clones a repo and builds `detectron2` from source on first use.
-- A HuggingFace account + `HF_TOKEN` set in the environment (or `huggingface-cli login` already done) for MAIRA-2 and MedGemma — both are gated models; nothing here can automate accepting that license for you. **BiomedParse and BiomedCLIP are not gated** — no token needed for those tools.
+- Hugging Face access: accept the gated-model terms for [MAIRA-2 (`microsoft/maira-2`)](https://huggingface.co/microsoft/maira-2), [BiomedParse (`microsoft/BiomedParse`, including `biomedparse_v1.pt`)](https://huggingface.co/microsoft/BiomedParse), and [MedGemma (`google/medgemma-4b-it` / `google/medgemma-1.5-4b-it`)](https://huggingface.co/google/medgemma-1.5-4b-it), then set `HF_TOKEN` or run `hf auth login`. [BiomedCLIP](https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224) is public and needs no token.
+- `HF_TOKEN` is a Hugging Face User Access/API token, not a model checkpoint. Create a token with read access at [Hugging Face settings](https://huggingface.co/settings/tokens), then export it with `export HF_TOKEN=hf_...` or run `hf auth login`.
+- Checkpoints download automatically on the first call to the corresponding tool; no manual model download is required.
+- Optional prefetch: after authenticating, run `hf download microsoft/maira-2`, `hf download microsoft/BiomedParse biomedparse_v1.pt`, `hf download microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224`, or the relevant `google/medgemma-*` command to download a checkpoint before inference.
 
 ## Quick start
 
