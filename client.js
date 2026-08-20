@@ -39,7 +39,7 @@ window.__ModuleLoader__.load({
           inject: (sessionId) => ({
             loadImage: async (attachment) => {
               const session = sessions.binding(sessionId)?.session
-              if (session === undefined) throw new Error(`dsh-medomni preview: unknown session "${sessionId}"`)
+              if (session === undefined) throw new Error(`dsh-MedOmni preview: unknown session "${sessionId}"`)
               const result = await session.readAttachment(attachment.attachmentId)
               if (!result.ok) throw new Error(`${result.error.code}: ${result.error.message}`)
               const bytes = Uint8Array.from(result.value.data)
@@ -109,7 +109,7 @@ window.__ModuleLoader__.load({
         return () => document.removeEventListener('keydown', onKeyDown)
       }, [expanded])
 
-      const label = attachment.name ?? 'dsh-medomni preview'
+      const label = attachment.name ?? 'dsh-MedOmni preview'
       const fit = useMemo(() => previewFit(attachment), [attachment])
       if (error) return createElement('div', { style: imageFallbackStyle }, 'Preview failed to load')
       if (src === null) return createElement('div', { style: imageFallbackStyle }, 'Loading preview...')
@@ -178,10 +178,10 @@ window.__ModuleLoader__.load({
     }
 
     function titleFor(toolName) {
-      if (toolName.includes('segmentation')) return 'dsh-medomni Segmentation'
-      if (toolName.includes('classify')) return 'dsh-medomni Classification'
-      if (toolName.includes('report')) return 'dsh-medomni Report'
-      return 'dsh-medomni'
+      if (toolName.includes('segmentation')) return 'dsh-MedOmni Segmentation'
+      if (toolName.includes('classify')) return 'dsh-MedOmni Classification'
+      if (toolName.includes('report')) return 'dsh-MedOmni Report'
+      return 'dsh-MedOmni'
     }
 
     function firstLine(text) {
